@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Project1</title>
+    
+    <style>
+        * {
+            color: rgb(15, 13, 13);
+        }
+        #heading{
+            text-align: center;
+            border: 2px solid black;
+            padding: 8px;
+        }
+
+      
+
+        div {
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .button {
+            padding: 20px;
+            border: 2px solid rgb(11, 13, 10);
+            border-radius: 5px;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #orange {
+            background-color: orange;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+        .button:hover{
+            cursor: pointer;
+            border-color: aqua;
+        }
+        #para{
+            font-weight: 500;
+            font-size: large;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="heading">JavaScrpt Project 1</h2>
+   
+    <div>
+
+        <span class="button" id="red">click</span>
+        <span class="button" id="yellow">click</span>
+        <span class="button" id="orange">click</span>
+        <span class="button" id="blue">click</span>
+
+    </div>
+
+    <p id="para">Try clicking on one of the colors above
+        to change the background color of this page!</p>
+
+</body>
+
+<script>
+
+    const buttons = document.querySelectorAll(".button");
+    // console.log(buttons);
+    const body = document.querySelectorAll("*")
+    // console.log(body);
+    const para = document.querySelector("#para")
+    const heading = document.querySelector("#heading")
+
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function (E) {
+            if (E.target.id === "red") {
+                body[0].style.backgroundColor = "red"
+                para.style.color = "white"
+                heading.style.color = "white"
+            }
+            if (E.target.id === "yellow") {
+                body[0].style.backgroundColor = "yellow"
+                para.style.color = "black"
+                heading.style.color = "black"
+            }
+            if (E.target.id === "orange") {
+                body[0].style.backgroundColor = "orange"
+                para.style.color = "black"
+                heading.style.color = "black"
+            }
+            if (E.target.id === "blue") {
+                body[0].style.backgroundColor = "blue"
+                para.style.color = "white"
+                heading.style.color = "white"
+
+            }
+        })
+    })
+
+
+
+</script>
+
+
+</html>
